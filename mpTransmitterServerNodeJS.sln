@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35425.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "mpTransmitterServerNodeJS", "mpTransmitterServerNodeJS.njsproj", "{C94A4C18-5521-4020-B37F-7F90E196D231}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C94A4C18-5521-4020-B37F-7F90E196D231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C94A4C18-5521-4020-B37F-7F90E196D231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C94A4C18-5521-4020-B37F-7F90E196D231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C94A4C18-5521-4020-B37F-7F90E196D231}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD66ED36-D82E-4FA1-99B3-C6215179F7C2}
+	EndGlobalSection
+EndGlobal
