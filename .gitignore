@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/public/temp
+/scraped_data.db
+/public/select - Kopya.js
+/server - Kopya.js

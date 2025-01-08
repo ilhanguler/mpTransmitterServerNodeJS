@@ -1,60 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Scraper</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Visual Web Scraper</title>
     <style>
-        iframe {
+        table {
             width: 100%;
-            height: 500px;
-            border: 1px solid #ccc;
-            pointer-events: auto;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
 
-        #overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: 999;
-            transition: all 200ms ease;
-            outline: 3px solid red;
-            pointer-events: none;
-        }
-
-        #overlaySel {
-            position: absolute;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: 999;
-            transition: all 200ms ease;
-            outline: 3px solid blue;
-            pointer-events: none;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
         }
     </style>
 </head>
 <body>
-    <h1>Visual Web Scraper</h1>
-    <form id="website-form">
-        <label for="website">Enter Website URL:</label>
-        <input type="url" id="website" name="website" required style="width: 50%;" />
-        <button type="submit">Load Website</button>
-    </form>
+    <div class="container">
+        <h1>Web Scraper</h1>
 
-    <div style="position: relative;">
-        <iframe id="iframe" src="about:blank"></iframe>
-        <div id="overlay"></div>
-        <div id="overlaySel"></div>
+        <div>
+            <h3>Scrape Status: <span id="scrapeStatus">Checking...</span></h3>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <a href="seek.html" class="btn btn-primary btn-block">Seek Links</a>
+            </div>
+            <div class="col-md-6">
+                <a href="xpath.html" class="btn btn-success btn-block">Set XPaths</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <button id="start-scraping" class="btn btn-info btn-block">Start Scraping</button>
+            </div>
+            <div class="col-md-4">
+                <button id="stop-scraping" class="btn btn-warning btn-block">Stop Scraping</button>
+            </div>
+            <div class="col-md-4">
+                <button id="refresh-data" class="btn btn-default btn-block">Refresh Data</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button id="resetSpecific" class="btn btn-warning btn-block">Reset Specific Tables</button>
+            </div>
+            <div class="col-md-6">
+                <button id="resetAll" class="btn btn-warning btn-block">Reset All Tables</button>
+            </div>
+        </div>
+
+        <h2>URL Links</h2>
+        <table id="links-table" class="table table-bordered">
+            <thead><tr><th>id</th><th>xpath</th><th>link</th><th>text content</th></tr></thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>XPaths to Scrape</h2>
+        <table id="xpaths-table" class="table table-bordered">
+            <thead><tr><th>id</th><th>xpath</th></tr></thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>Scraped Data</h2>
+        <table id="scraped-table" class="table table-bordered">
+            <thead><tr><th>id</th><th>link</th><th>data</th><th>date</th></tr></thead>
+            <tbody></tbody>
+        </table>
     </div>
-
-    <button id="scrape-btn" disabled>Scrape Selected Element</button>
-
-    <script src="test.js"></script>
-
+        <script src="index.js"></script>
 </body>
 </html>

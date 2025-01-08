@@ -28,14 +28,22 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="public\index.html" />
-    <Content Include="public\Scraper.js">
+    <Content Include="public\index.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="public\test.js">
+    <Content Include="public\index.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="public\test2.js">
+    <Content Include="public\xpath.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\xpath.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\seek.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\seek.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="server.js" />
